@@ -1,11 +1,13 @@
-// Day 02
-// 型別推論 X 註記 - Type Inference & Annotation
+// Day 02: 型別推論 X 註記 - Type Inference & Annotation
+
+export {};
+
 // TypeScript 會自動進行型別推論
 // 然而這個功能有其極限，所以最好明確註記，且不要濫用 any。
 
 // 註記形式（一）：註記在變數前面
-const message_02: string = 'Hello World';
-//              ^^^^^^^^
+const message: string = 'Hello World';
+//           ^^^^^^^^
 
 // 函式型別的註記請容後再敘
 function mayReturnEitherStringOrNumber(b: boolean): string | number {
@@ -17,14 +19,14 @@ function mayReturnEitherStringOrNumber(b: boolean): string | number {
 }
 
 // 註記形式（二）：註記在未知的值
-const age_02i = <number>mayReturnEitherStringOrNumber(false);
-//             ^^^^^^^^
-console.log(typeof age_02i); // 'number'
+const agei = <number>mayReturnEitherStringOrNumber(false);
+//           ^^^^^^^^
+console.log(typeof agei); // 'number'
 
 // 註記形式（三）：註記在未知的值 但使用 as 關鍵字
-const age_02iAsString = mayReturnEitherStringOrNumber(true) as string;
-//                                                          ^^^^^^^^^
-console.log(typeof age_02iAsString); // 'string'
+const ageiAsString = mayReturnEitherStringOrNumber(true) as string;
+//                                                       ^^^^^^^^^
+console.log(typeof ageiAsString); // 'string'
 
 // TypeScript 中的型別有：
 

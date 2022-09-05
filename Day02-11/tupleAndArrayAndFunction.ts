@@ -1,10 +1,14 @@
+// Day 06: 陣列與函式 X 陣列與元組 - Array & Functions & Tuples
+
+export {};
+
 // REVIEW: 還記得 Day 04 時曾經提過
 // 部分狀況下不需要積極對函式 output 註記型別嗎？
 
 // 今天就是要討論這個狀況：
 // 比方說：Callback Functions (大部分狀況下)
-const numbers_06taf = [1, 2, 3];
-const mappedNumbers_06taf = numbers_06taf.map((num) => num * 2);
+const numbers = [1, 2, 3];
+const mappedNumbers = numbers.map((num) => num * 2);
 
 // ============================================================
 // POINT: map, filter, reduce 都是很常見處理陣列這類串列型資料的好方法
@@ -44,19 +48,19 @@ const mappedNumbers_06taf = numbers_06taf.map((num) => num * 2);
 // 綜合以上觀點，只要遇到元組必須要進行註記行為
 
 // 假設今天我們有如下資料 紀錄汽車廠牌 車型 顏色與出廠日期
-const BMWMotor_06taf = [
+const BMWMotor = [
     'BMW',
     'motorcycle',
     'silver-pink', // pink????
     new Date(2019, 2, 17),
 ];
-const JaguarOffRoad_06taf = [
+const JaguarOffRoad = [
     'Jaguar',
     'off-road',
     'royal-blue',
     new Date(2019, 1, 9),
 ];
-const ToyotaRV_06taf = [
+const ToyotaRV = [
     'Toyota',
     'recreational',
     'ivory-white',
@@ -68,7 +72,7 @@ const ToyotaRV_06taf = [
 // 為了解決這種情形 TypeScript 新增了元組型別
 // let A: [T1, T2, T3] = [V1, V2, V3];
 // 前述的狀況便可以這樣宣告
-const car_06taf: [string, string, string, Date] = [
+const car: [string, string, string, Date] = [
     'Car',
     'Type',
     'Color',
@@ -77,8 +81,8 @@ const car_06taf: [string, string, string, Date] = [
 
 // 我們可以將其宣告為自定義型別 這就是型別化名 (Type Alias)
 // Syntax: type <custom-type-name> = <your-type>
-type Vehicle_06taf = [string, string, string, Date];
-const motor: Vehicle_06taf = ['Lala', 'Lulu', 'Lele', new Date(1970, 1, 1)];
+type Vehicle = [string, string, string, Date];
+const motor: Vehicle = ['Lala', 'Lulu', 'Lele', new Date(1970, 1, 1)];
 
 // WARNING: 元組的缺點是 只比對型別而不比對實際內容
 // POINT: 建議以 JSON 物件格式來配合元組使用
