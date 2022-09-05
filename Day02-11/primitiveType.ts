@@ -17,8 +17,8 @@ let nothingLiterally = null;
 // 讀者只要先記得他們會被推論為 any 就可以了
 
 // 型別推論的真正用意在於
-// 如果嘗試將其型別改變 TypeScript 會跳出 warning
-age = 'Young'; // warning
+// 如果嘗試將其型別改變 TypeScript 會跳出 error
+age = 'Young'; // error
 // 然而 any 推論的變數可以被隨便一再改變型別 這會導致混亂
 // 所以學習 TypeScript 的第一步就是請避免使用 any (只有極少數狀況會用到)
 
@@ -32,20 +32,20 @@ messageToSend = 12345;
 // 因此，為了避免 any 型別推論，應當對 Nullable Types 或延遲賦值的變數做型別註記
 let absoluteNothing: undefined = undefined;
 let literallyAbsoluteNothing: null = null;
-absoluteNothing = 12345; // warning
-literallyAbsoluteNothing = 12345; // warning
+absoluteNothing = 12345; // error
+literallyAbsoluteNothing = 12345; // error
 
 // 如果今天想要讓某變數預設為 Nullable Types 但之後可能會是某型別的話，比方說：
 let canBeNullableString: string;
 canBeNullableString = 'Hello';
-canBeNullableString = 12345; // warning
-canBeNullableString = true; // warning
+canBeNullableString = 12345; // error
+canBeNullableString = true; // error
 // 會發現只要值是字串是可以正確運作的
 
 // 一開始尚未賦值時應該是 undefined
 // 為什麼 TypeScript 不會報錯呢？
 let canBeNullableString_u: string;
-let myString = canBeNullableString_u; // warning
+let myString = canBeNullableString_u; // error
 canBeNullableString_u = 'Hello';
 // 可以注意到其實 TypeScript 是會跳出警告的
 // 這概念有點暫時性死區 (TDZ, Temporal Dead Zone)

@@ -62,7 +62,7 @@ const infoAboutMartin = {
     nothingSpecial: null,
 };
 printInfo(infoAboutMartin);
-// WARNING: 狀況二竟然不會跳出 warning
+// WARNING: 狀況二竟然不會跳出 error
 // 這是超級雷區請一定要注意 畢竟是非常常發生的狀況吧...
 // 解決方法也很單純 就是對這個變數積極做型別註記後才傳入
 const infoAboutMarvin: PersonInfo = {
@@ -73,7 +73,7 @@ const infoAboutMarvin: PersonInfo = {
     hello: 'dlrow',
     nothingSpecial: null, // null 依然沒問題
 };
-printInfo(infoAboutMarvin); // 此處依然不會跳出 warning
+printInfo(infoAboutMarvin); // 此處依然不會跳出 error
 
 // ============================================================
 // 參數對於未被註記的變數檢測

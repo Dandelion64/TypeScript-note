@@ -71,7 +71,7 @@ justAnObject.newProp = 123;
 // 這裡讓我們先清楚地定義 VanillaJS 中的物件
 // 狹義物件：僅限於 JSON 格式 ({...})
 // 廣義物件：包含 JSON 格式、陣列、函式、類別、類別實體之物件
-justAnObject = 123; // warning
+justAnObject = 123; // error
 justAnObject = [1, '2', true, { hello: 'World' }];
 justAnObject = () => {
     console.log('pass!');

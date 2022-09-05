@@ -86,6 +86,6 @@ console.log(addThreeAsDefault(4));
 console.log(addThreeAsDefault(5, 6));
 
 type VehicleInfo = [string, string, string?, Date?];
-const car: VehicleInfo = ['CRV', 'Honda', new Date()]; // warning
+const car: VehicleInfo = ['CRV', 'Honda', new Date()]; // error
 const bicycle: VehicleInfo = ['???', 'Giant', undefined, new Date()];
 const motor: VehicleInfo = ['Ninja', 'Honda', 'Bruce', new Date()];
