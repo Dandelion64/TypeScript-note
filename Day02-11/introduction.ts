@@ -60,5 +60,5 @@ console.log(typeof ageiAsString); // 'string'
 // 包含 union 以及 intersaction
 // 由邏輯運算子 | 以及 & 組成
 
-// 通用型別 (Generic Type)：
+// 泛用型別 (Generic Type)：
 // 留待日後介紹，可以使程式碼更加通用。
