@@ -48,7 +48,7 @@ const toby: PersonInfo = {
 
 // 如果要讓物件可以做出什麼行為 最簡單的做法就是定義一個方法 (Method)
 
-// REVIEW: 介面可以重複被宣告 最後的結果會是其交集
+// REVIEW: 介面可以重複被宣告 最後的結果會是其聯集
 // 這是叫做 Declaration Merging 的技巧 (Day 14)
 interface PersonInfo {
     name: string;
