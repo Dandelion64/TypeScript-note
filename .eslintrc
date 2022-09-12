@@ -11,6 +11,9 @@
     },
     "plugins": ["prettier", "@typescript-eslint"],
     "rules": {
-        "prettier/prettier": "warn"
+        "prettier/prettier": "warn",
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/triple-slash-reference": "off"
     }
 }
