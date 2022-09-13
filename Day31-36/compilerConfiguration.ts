@@ -5,7 +5,7 @@ export {};
 // 這系列主要會討論三件事情
 // 1. Compiler
 // 2. Webpack
-// 3. Façade Pattern (外觀樣式)
+// 3. Façade Pattern (外觀模式)
 
 // REVIEW: tsconfig.json
 // Docs: https://www.typescriptlang.org/docs/handbook/compiler-options.html
