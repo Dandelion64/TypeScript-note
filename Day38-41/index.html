@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBike Map Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.min.css" integrity="sha512-oIQ0EBio8LJupRpgmDsIsvm0Fsr6c3XNHLB7at5xb+Cf6eQuCX9xuX8XXGRIcokNgdqL1ms7nqbQ6ryXMGxXpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="map-wrapper">
+        <div id="map"></div>
+    </div>
+
+    <div class="input-wrapper">
+        <label for="select-district" id="selectDistrictLabel">
+            選擇行政區
+        </label>
+        <select name="district" id="selectDistrict">
+            <!-- <option value="信義區">信義區</option> -->
+        </select>
+    </div>
+
+    <script src="./dist/bundle.js"></script>
+</body>
+</html>
