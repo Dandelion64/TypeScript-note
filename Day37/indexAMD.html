@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3rd-Party Package & TypeScript Definition File</title>
+    <!-- 引入 -->
+    <script src="./require.js"></script>
+    <script src="./indexAMD.js"></script>
+
+    <script>
+        // 必須指定 jQuery 的位置
+        requirejs.config({
+            paths: {
+                'jquery': '../node_modules/jquery/dist/jquery.min'
+            }
+        });
+
+        require(['indexAMD']);
+    </script>
+</head>
+<body>
+    <button id="mainBtn">Click Me~</button>
+    <p>You've clicked <span id="count">0</span> times!</p>
+</body>
+</html>
